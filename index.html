@@ -1,142 +1,416 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Manuel Mezcua | Desarrollador Web</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio profesional de Jose Manuel Mezcua, desarrollador web especializado en frontend moderno.">
+  <title>Jose Manuel Mezcua | Portfolio Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <noscript>
+    <style>
+      #introScreen { display: none !important; }
+      body { overflow: auto !important; }
+    </style>
+  </noscript>
 </head>
-<body class="bg-white-500 text-gray-800 scroll-smooth">
+<body class="intro-active">
+  <div class="intro-screen" id="introScreen" aria-hidden="false">
+    <div class="intro-content">
+      <p class="intro-kicker">Portfolio Web</p>
+      <div class="intro-mark" aria-hidden="true">
+        <span>JM</span>
+      </div>
+      <h1 class="intro-title">Jose Manuel Mezcua</h1>
+      <p class="intro-subtitle">Frontend / Backend / WordPress / Next.js</p>
+      <button class="intro-button" id="introButton" type="button">Entrar al Portfolio</button>
+    </div>
+  </div>
+  <div class="scroll-progress" aria-hidden="true">
+    <span id="scrollProgressBar"></span>
+  </div>
 
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#inicio" class="brand">Jose Manuel <strong>Mezcua</strong></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Abrir menú">Menu</button>
+      <nav>
+        <ul class="nav-links" id="mainNav">
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- NAVBAR -->
-    <header class="bg-blue-600 shadow sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex justify-between items-center p-4 text-white">
-            <h1 class="text-2xl font-bold">Jose Manuel Mezcua</h1>
-            <nav class="space-x-4">
-                <a href="#sobre-mi" class="hover:underline">Sobre mí</a>
-                <a href="#habilidades" class="hover:underline">Habilidades</a>
-                <a href="#proyectos" class="hover:underline">Proyectos</a>
-                <a href="#contacto" class="hover:underline">Contacto</a>
-            </nav>
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-decor" aria-hidden="true">
+        <span class="decor-one"></span>
+        <span class="decor-two"></span>
+        <span class="decor-three"></span>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="pill"><span class="dot"></span>Disponible para colaborar en proyectos web</div>
+          <h1>Desarrollador Web enfocado en crear <span class="hero-accent">experiencias modernas y utiles</span>.</h1>
+          <p>
+            Soy Jose Manuel Mezcua, <strong>Técnico Superior en Desarrollo de Aplicaciones Web (DAW)</strong>.
+            Actualmente trabajo en la marca de ropa <strong>Yellow Original</strong>, participando en la evolución de su web oficial.
+            Desarrollo soluciones <strong>Frontend y Backend</strong>, y trabajo con <strong>WordPress</strong> y <strong>Next.js</strong>
+            para crear productos web sólidos, escalables y orientados a resultados.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#proyectos">Ver proyectos destacados</a>
+            <a class="btn btn-ghost" href="#contacto">Hablar conmigo</a>
+            <a class="btn btn-cv" href="cv-jose-manuel-mezcua.pdf" download="CV-Jose-Manuel-Mezcua.pdf">Descargar CV</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span>Diseño</span>
+              <strong>UI clara</strong>
+            </div>
+            <div class="metric-item">
+              <span>Rendimiento</span>
+              <strong>Web rapida</strong>
+            </div>
+            <div class="metric-item">
+              <span>Entrega</span>
+              <strong>Responsive</strong>
+            </div>
+          </div>
         </div>
-    </header>
 
-    <!-- HERO -->
-    <section class="min-h-screen flex flex-col items-center justify-center text-center bg-blue-600 text-white p-10">
-        <h2 class="text-4xl md:text-6xl font-bold mb-4">Hola, soy Jose Manuel</h2>
-        <p class="text-xl mb-6">Desarrollador de Aplicaciones Web</p>
-        <a href="#proyectos" class="bg-white text-indigo-600 px-6 py-2 rounded-full hover:bg-gray-200 transition">Ver mis proyectos</a>
+        <aside class="hero-panel reveal">
+          <div class="panel-item">
+            <span class="panel-title">Rol actual</span>
+            <strong>
+              Desarrollo web en
+              <a class="inline-link" href="https://www.yelloworiginal.com/" target="_blank" rel="noopener noreferrer">www.yelloworiginal.com</a>
+            </strong>
+          </div>
+          <div class="panel-item">
+            <span class="panel-title">Especialidad</span>
+            <strong>Frontend y Backend + WordPress</strong>
+          </div>
+          <div class="panel-item">
+            <span class="panel-title">Nuevo aprendizaje</span>
+            <strong>Next.js (routing, SSR y estructura moderna)</strong>
+          </div>
+        </aside>
+      </div>
     </section>
 
-    <!-- SOBRE MI -->
-    <section id="sobre-mi" class="max-w-4xl mx-auto py-16 px-4">
-        <h3 class="text-3xl font-bold mb-4 text-indigo-600">Sobre mí</h3>
-        <p class="text-gray-700 leading-relaxed">
-            <p class="text-white-700 leading-relaxed">
-                Soy un desarrollador web con experiencia en la creación de aplicaciones modernas y dinámicas, 
-                especializado en tecnologías como HTML, CSS, JavaScript, PHP y MySQL. 
-                Mi enfoque principal es ofrecer soluciones innovadoras y funcionales que combinen diseño atractivo y rendimiento eficiente. 
-                Me apasiona el desarrollo FrontEnd, donde puedo aplicar mi creatividad para construir interfaces intuitivas y amigables para el usuario. 
-                Además, tengo experiencia trabajando con frameworks y herramientas modernas que optimizan el desarrollo y garantizan la calidad del producto final. 
-                Estoy comprometido con el aprendizaje continuo y la mejora constante para mantenerme actualizado en un sector en constante evolución.
+    <section id="sobre-mi" class="parallax-section">
+      <div class="container reveal">
+        <h2 class="section-title">Perfil profesional</h2>
+        <p class="section-intro">
+          Soy desarrollador web titulado con el <strong>Grado Superior en Desarrollo de Aplicaciones Web</strong>.
+          Tengo experiencia construyendo y manteniendo proyectos digitales para negocio real, desde la planificación técnica hasta la publicación.
+          Manejo tanto <strong>Frontend</strong> como <strong>Backend</strong>, priorizando estructura limpia, rendimiento, accesibilidad y una experiencia sólida en móvil y escritorio.
+          También trabajo con <strong>WordPress</strong> y stacks modernos como <strong>Next.js</strong> para adaptar cada proyecto al objetivo del cliente.
+        </p>
+
+        <div class="about-grid">
+          <article class="card">
+            <h3>Cómo trabajo</h3>
+            <p>
+              Trabajo con una metodología orientada a resultados: definición de objetivos y requisitos,
+              planificación técnica, ejecución por fases y control de calidad antes de publicar.
+              En cada proyecto cuido arquitectura, rendimiento, mantenibilidad y consistencia visual para que el producto final sea profesional y escalable.
             </p>
-    </section>
+          </article>
 
-    <!-- HABILIDADES -->
-    <section id="habilidades" class="bg-gray-100 py-16 px-4">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-3xl font-bold mb-8 text-indigo-600">Habilidades</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="text-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="h-12 mx-auto">
-                    <p class="font-semibold text-gray-700">HTML5</p>
-                </div>
-                <div class="text-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="h-12 mx-auto">
-                    <p class="font-semibold text-gray-700">CSS3</p>
-                </div>
-                <div class="text-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="h-12 mx-auto">
-                    <p class="font-semibold text-gray-700">JavaScript</p>
-                </div>
-                <div class="text-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="h-12 mx-auto">
-                    <p class="font-semibold text-gray-700">PHP</p>
-                </div>
+          <article class="card">
+            <h3>Stack actual</h3>
+            <div class="tech-logos" aria-label="Logos de tecnologias">
+              <div class="tech-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" loading="lazy">
+                <span>HTML5</span>
+              </div>
+              <div class="tech-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" loading="lazy">
+                <span>CSS3</span>
+              </div>
+              <div class="tech-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy">
+                <span>JavaScript</span>
+              </div>
+              <div class="tech-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" loading="lazy">
+                <span>Java</span>
+              </div>
+              <div class="tech-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" loading="lazy">
+                <span>TypeScript</span>
+              </div>
+              <div class="tech-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" loading="lazy">
+                <span>React</span>
+              </div>
+              <div class="tech-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" loading="lazy">
+                <span>Next.js</span>
+              </div>
+              <div class="tech-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" alt="WordPress" loading="lazy">
+                <span>WordPress</span>
+              </div>
+              <div class="tech-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" loading="lazy">
+                <span>PHP</span>
+              </div>
+              <div class="tech-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" loading="lazy">
+                <span>MySQL</span>
+              </div>
+              <div class="tech-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" loading="lazy">
+                <span>Git</span>
+              </div>
+              <div class="tech-logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" loading="lazy">
+                <span>GitHub</span>
+              </div>
             </div>
+          </article>
         </div>
+      </div>
     </section>
 
-    <!-- PROYECTOS -->
-    <section id="proyectos" class="py-16 px-4 bg-white">
-        <div class="max-w-6xl mx-auto text-center">
-            <h3 class="text-3xl font-bold mb-8 text-indigo-600">Proyectos</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Proyecto 1 -->
-                <div class="bg-gray-100 rounded-lg shadow p-4">
-                    <img src="https://media.licdn.com/dms/image/v2/D4D2DAQFadQ2DxJFN4g/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1731367491566?e=1746622800&v=beta&t=ejs1wiuiRyMKiFQ6VORXAnZRUJHqsDio0Cn4qNMmRC0" alt="Proyecto 1" class="rounded mb-4">
-                    <h4 class="text-xl font-bold text-indigo-600">Cronometro de Carrera</h4>
-                    <p class="text-gray-700">Proyecto realizado por mi, es un cronometro para una carrera de coches.</p>
-                    <a href="https://github.com/JosemaMezcua/CarreraDeCoches" class="text-indigo-600 hover:underline mt-2 block">Ver más</a>
-                </div>
-                <!-- Proyecto 2 -->
-                <div class="bg-gray-100 rounded-lg shadow p-4">
-                    <img src="https://media.licdn.com/dms/image/v2/D4D2DAQHTGrC4SYA_7A/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1731370398731?e=1746622800&v=beta&t=g6jwz07wlmvmDU25VWJP6MkfloZlDWN-PV1cNbk-eLE" alt="Proyecto 2" class="rounded mb-4">
-                    <h4 class="text-xl font-bold text-indigo-600">Juego Blackjack</h4>
-                    <p class="text-gray-700">Proyecto realizado por mi, simplemente un juego de Blackjack.</p>
-                    <a href="https://github.com/JosemaMezcua/Blackjack" class="text-indigo-600 hover:underline mt-2 block">Ver más</a>
-                </div>
-                <!-- Proyecto 3 -->
-                <div class="bg-gray-100 rounded-lg shadow p-4">
-                    <img src="https://autocaravanas.yampe.es/wp-content/uploads/2025/01/logo.jpeg" alt="Proyecto 3" class="rounded mb-4">
-                    <h4 class="text-xl font-bold text-indigo-600">Página web creada para una empresa</h4>
-                    <p class="text-gray-700">Proyecto realizado por mi, es una pagina web para una empresa de alquiler de autocaravanas.</p>
-                    <a href="https://autocaravanas.yampe.es/" class="text-indigo-600 hover:underline mt-2 block">Ver más</a>
-                </div>
+    <section id="experiencia" class="experience parallax-section">
+      <div class="container reveal">
+        <h2 class="section-title">Experiencia actual</h2>
+        <p class="section-intro">
+          Actualmente trabajo en un entorno comercial real, desarrollando y mejorando soluciones web para marca y conversión.
+        </p>
+
+        <div class="timeline">
+          <article>
+            <small>Actualidad</small>
+            <h4>Yellow Original · Desarrollo Web</h4>
+            <p>
+              Desarrollo y mejoro de forma continua la web oficial de la marca en
+              <a class="inline-link" href="https://www.yelloworiginal.com/" target="_blank" rel="noopener noreferrer">www.yelloworiginal.com</a>,
+              optimizando frontend, backend, usabilidad y rendimiento en dispositivos móviles y escritorio.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="parallax-section">
+      <div class="container reveal">
+        <h2 class="section-title">Proyectos</h2>
+        <p class="section-intro">
+          Una selección de trabajos publicados y proyectos técnicos donde he aplicado diseño, lógica de frontend y estructura profesional.
+        </p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-banner banner-yellow">
+              <strong>Guía de Tallas Yellow</strong>
+              <span>Next.js</span>
             </div>
-        </div>
-    </section>
-
-    <section class="animate-fade-in">
-        <!-- Contenido -->
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto" class="py-16 px-4 bg-gray-100">
-        <div class="max-w-xl mx-auto text-center">
-            <h3 class="text-3xl font-bold mb-6 text-indigo-600">Contáctame</h3>
-            <div class="space-y-6">
-                <div class="flex items-center justify-center space-x-4">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" class="h-8">
-                    <a href="https://www.linkedin.com/in/jose-manuel-mezcua-rivas-b33369199/" target="_blank" class="text-indigo-600 hover:underline font-semibold">Mi perfil de LinkedIn</a>
-                </div>
-                <div class="flex items-center justify-center space-x-4">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" class="h-8">
-                    <a href="mailto:josemezcua337@gmail.com" class="text-indigo-600 hover:underline font-semibold">josemezcua337@gmail.com</a>
-                </div>
-                <div class="flex items-center justify-center space-x-4">
-                    <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Teléfono" class="h-8">
-                    <span class="text-gray-800 font-semibold">+34 657 54 24 86</span>
-                </div>
+            <div class="project-content">
+              <p>
+                Herramienta online para consultar tallas de forma rápida, con una interfaz clara y orientada a mejorar la experiencia de compra.
+              </p>
+              <div class="project-links">
+                <a href="https://guia-tallas-yellow.vercel.app/" target="_blank" rel="noopener noreferrer">Ver sitio</a>
+              </div>
             </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-banner banner-orange">
+              <strong>Autocavaranas Neiva</strong>
+              <span>Sitio empresarial</span>
+            </div>
+            <div class="project-content">
+              <p>
+                Web corporativa para alquiler de autocaravanas, centrada en claridad de servicios, contacto directo y confianza de marca.
+              </p>
+              <div class="project-links">
+                <a href="https://autocavaranasneiva.com/" target="_blank" rel="noopener noreferrer">Ver sitio</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-banner banner-forest">
+              <strong>Autocaravanas Yampe</strong>
+              <span>Sitio empresarial</span>
+            </div>
+            <div class="project-content">
+              <p>
+                Página web corporativa desarrollada para mostrar servicios, captar contactos y mejorar la presencia digital del negocio.
+              </p>
+              <div class="project-links">
+                <a href="https://autocaravanas.yampe.es/" target="_blank" rel="noopener noreferrer">Ver sitio</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-banner banner-blue">
+              <strong>Cronómetro de Carrera</strong>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-content">
+              <p>
+                Aplicación para controlar tiempos en carreras de coches con lógica de cronometraje y estructura orientada a eventos en tiempo real.
+              </p>
+              <div class="project-links">
+                <a href="https://github.com/JosemaMezcua/CarreraDeCoches" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-banner banner-purple">
+              <strong>Juego Blackjack</strong>
+              <span>Frontend</span>
+            </div>
+            <div class="project-content">
+              <p>
+                Proyecto de lógica de juego en JavaScript para practicar estados, reglas y flujo de interacción desde la interfaz.
+              </p>
+              <div class="project-links">
+                <a href="https://github.com/JosemaMezcua/Blackjack" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
         </div>
+      </div>
     </section>
 
-    <footer class="text-center text-sm text-gray-500 py-8">
-        © 2025 Jose Manuel Mezcua Rivas — Todos los derechos reservados
-    </footer>
+    <section id="contacto" class="parallax-section">
+      <div class="container reveal">
+        <div class="contact-card">
+          <h2 class="section-title">Contacto</h2>
+          <p class="section-intro">
+            Si quieres mejorar tu web o lanzar una nueva, podemos hablar y plantear una solución adaptada a tu negocio.
+          </p>
+          <div class="contact-grid">
+            <a href="mailto:josemezcua337@gmail.com?subject=Consulta%20desde%20portfolio">josemezcua337@gmail.com</a>
+            <a href="https://www.linkedin.com/in/jose-manuel-mezcua-rivas-b33369199/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <p class="contact-phone">+34 657 54 24 86</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+  <footer>
+    © <span id="year"></span> Jose Manuel Mezcua · Portfolio profesional
+  </footer>
+
+  <script>
+    const introScreen = document.getElementById("introScreen");
+    const introButton = document.getElementById("introButton");
+    let introClosed = false;
+
+    const closeIntro = () => {
+      if (introClosed) {
+        return;
+      }
+      introClosed = true;
+      document.body.classList.remove("intro-active");
+      document.body.classList.add("intro-done");
+      if (introScreen) {
+        introScreen.setAttribute("aria-hidden", "true");
+      }
+    };
+
+    if (introScreen) {
+      if (introButton) {
+        introButton.addEventListener("click", () => {
+          closeIntro();
         });
-    </script>
+      }
+    }
 
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = mainNav.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      mainNav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mainNav.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+
+    const scrollProgressBar = document.getElementById("scrollProgressBar");
+    if (scrollProgressBar) {
+      const updateScrollProgress = () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = maxScroll > 0 ? (scrollTop / maxScroll) * 100 : 0;
+        scrollProgressBar.style.width = Math.min(100, Math.max(0, progress)) + "%";
+      };
+
+      updateScrollProgress();
+      window.addEventListener("scroll", updateScrollProgress, { passive: true });
+      window.addEventListener("resize", updateScrollProgress);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+
+    const parallaxSections = Array.from(document.querySelectorAll(".parallax-section"));
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (parallaxSections.length > 0 && !reduceMotion) {
+      let isTicking = false;
+
+      const updateParallax = () => {
+        const viewportHeight = window.innerHeight || 1;
+
+        parallaxSections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          const sectionCenter = rect.top + (rect.height / 2);
+          const delta = (sectionCenter - (viewportHeight / 2)) / viewportHeight;
+          const shift = Math.max(-18, Math.min(18, -delta * 22));
+          section.style.setProperty("--parallax-shift", shift.toFixed(2) + "px");
+        });
+
+        isTicking = false;
+      };
+
+      const requestParallaxUpdate = () => {
+        if (!isTicking) {
+          isTicking = true;
+          window.requestAnimationFrame(updateParallax);
+        }
+      };
+
+      requestParallaxUpdate();
+      window.addEventListener("scroll", requestParallaxUpdate, { passive: true });
+      window.addEventListener("resize", requestParallaxUpdate);
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
